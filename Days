@@ -1,0 +1,79 @@
+package javalab5;
+import java.util.Scanner;
+
+public class Days {
+    
+    public static void main(String[] args) {
+        int d,k,a = 0;
+        String m = new String();
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the number");
+        k = scan.nextInt();
+        if (k < 1 && k > 366)
+            System.out.println("Out of date");
+                
+        d = k;
+        for (int i = 0; i <= 11; i++)
+        {    
+        if (d > a)
+        {
+         switch(i)
+         {
+             case 1:
+                 m = "Февраля";
+                 a = 29;
+                 break;
+             case 2:
+                 m = "Марта";
+                 a = 31;
+                 break;
+             case 3:
+                 m = "Апреля";
+                 a = 30;
+                 break;
+             case 4:
+                 m = "Мая";
+                 a = 31;
+                 break;
+             case 5: 
+                 m = "Июня";
+                 a = 30;
+                 break;
+             case 6:
+                 m = "Июля";
+                 a = 31;
+                 break;
+             case 7:
+                 m = "Августа";
+                 a = 31;
+                 break;
+             case 8:
+                 m = "Сентября";
+                 a = 30;
+                 break;
+             case 9:
+                 m = "Октября";
+                 a = 31;
+                 break;
+             case 10:
+                 m = "Ноября";
+                 a = 30;
+                 break;
+             case 11:
+                 m = "Декабря";
+                 a = 31;
+                 break;
+             default:
+                 break;
+             
+            }
+            d = d - a;
+           }       
+        }   
+         System.out.print("Number " + k + " ");
+         System.out.print("match with " + d + " -e ");
+         System.out.print(m);
+    }
+    
+   
+}
